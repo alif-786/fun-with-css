@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun with border and border image</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        html,
+        body {
+            margin-top: 100px;
+            background-color: rgb(9, 13, 42);
+            color: white;
+        }
+
+        .cards {
+            padding: 20px;
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .border-gradient {
+            height: 313px;
+            width: 250px;
+            border: 1px solid;
+            padding: 10px;
+            border-image-source: linear-gradient(45deg, red, blue);
+            border-image-slice: 1;
+        }
+
+        .border-gradient-2 {
+            height: 313px;
+            width: 250px;
+            border-block-start: 1px solid;
+            padding-block-start: 10px;
+            border-image-source: linear-gradient(90deg, red 50%, blue 50%);
+            border-image-slice: 1;
+
+        }
+
+        .border-gradient-3 {
+            height: 313px;
+            width: 250px;
+            border-inline-start: 3px solid;
+            border-block-start: 3px solid;
+            border-image-source: radial-gradient(at top left, red, transparent 50%);
+            border-image-slice: 10;
+            padding: 10px;
+        }
+
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+
+        }
+
+        footer a {
+            color: red;
+            text-decoration: none;
+            font-size: 20px;
+            font: bold;
+
+        }
+
+
+        @media screen and (max-width:620px) {
+            html {
+                font-size: 15px;
+            }
+
+            body {
+                margin-top: 0px;
+            }
+
+            .cards {
+                flex-direction: column;
+
+                padding: 0px;
+                margin: 20px;
+                margin-top: 0px;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .border-gradient {
+                padding: 5px;
+                height: 250px;
+            }
+
+            .border-gradient-2 {
+                padding: 5px;
+                height: 250px;
+            }
+
+            .border-gradient-3 {
+                padding: 5px;
+                height: 250px;
+            }
+
+            ul {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Getting creative with borders</h1>
+    <div class="cards">
+        <div class="border-gradient">
+            <h1>Fun with border</h1>
+            <ul>
+                <li> height: 250px;</li>
+                <li> width: 250px;</li>
+                <li> border: 1px solid;</li>
+                <li> padding: 10px;</li>
+                <li> border-image-source: linear-gradient(45deg, red, blue);</li>
+                <li> border-image-slice: 1; </p>
+                </li>
+            </ul>
+        </div>
+        <div class="border-gradient-2">
+            <h1>Fun with border</h1>
+            <ul>
+                <li> height: 250px;</li>
+                <li> width: 250px;</li>
+                <li> border-block-start: 1px solid;</li>
+                <li> padding-block-start: 10px;</li>
+                <li> border-image-source: linear-gradient(90deg, red 50%, blue 50%);</li>
+                <li> border-image-slice: 1;</li>
+            </ul>
+        </div>
+        <div class="border-gradient-3">
+            <h1>Fun with border</h1>
+            <ul>
+                <li> height: 250px;</li>
+                <li> width: 250px;</li>
+                <li> border-inline-start: 3px solid;</li>
+                <li> border-block-start: 3px solid;</li>
+                <li> border-image-source: radial-gradient(at top left, red, transparent 50%);</li>
+                <li> border-image-slice: 10;</li>
+                <li> padding: 10px;</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <span>made by <a href="https://www.instagram.com/_justt.alif/" target="_blank">alif</a></span>
+    </footer>
+</body>
+</html>
